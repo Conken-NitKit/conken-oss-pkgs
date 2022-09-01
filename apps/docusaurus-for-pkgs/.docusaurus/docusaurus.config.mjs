@@ -26,7 +26,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/s11599/private/typescript-everything/apps/packages-document/sidebars.js",
+          "sidebarPath": "/Users/s11599/private/typescript-everything/apps/docusaurus-for-pkgs/sidebars.js",
           "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         "blog": {
@@ -34,7 +34,7 @@ export default {
           "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         "theme": {
-          "customCss": "/Users/s11599/private/typescript-everything/apps/packages-document/src/css/custom.css"
+          "customCss": "/Users/s11599/private/typescript-everything/apps/docusaurus-for-pkgs/src/css/custom.css"
         }
       }
     ]
