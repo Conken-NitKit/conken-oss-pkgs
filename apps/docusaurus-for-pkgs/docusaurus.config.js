@@ -23,8 +23,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ja',
+    locales: ['ja'],
   },
 
   presets: [
@@ -37,14 +37,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Conken-NitKit/typescript-everything/tree/main/apps/docusaurus-for-pkgs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Conken-NitKit/typescript-everything/tree/main/apps/docusaurus-for-pkgs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,22 +57,21 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: '@conken-pkg',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'コンポタ',
+          src: 'img/logo192.png',
         },
         items: [
+          {to: '/blog', label: '組織戦略', position: 'left'},
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+            href: 'https://github.com/conken-nitkit',
+            label: 'GitHub Org',
+            position: 'right',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://github.com/Conken-NitKit/typescript-everything/tree/main/apps/docusaurus-for-pkgs',
+            label: 'GitHub Repo',
             position: 'right',
           },
         ],
@@ -84,8 +83,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'ライブラリ運用の戦略',
+                to: '/pages/strategy/2022-09-02-stategy-pkgs',
               },
             ],
           },
@@ -93,29 +92,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'GitHub Org',
+                href: 'https://github.com/conken-nitkit',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'GitHub Repo',
+                href: 'https://github.com/Conken-NitKit/typescript-everything/tree/main/apps/docusaurus-for-pkgs',
               },
             ],
           },
