@@ -80,15 +80,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'ライブラリ運用の戦略',
-                to: '/pages/strategy/2022-09-02-stategy-pkgs',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
