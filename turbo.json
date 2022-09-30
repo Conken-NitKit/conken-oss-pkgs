@@ -1,0 +1,9 @@
+{
+  "baseBranch": "origin/develop",
+  "pipeline": {
+    "type-check": {
+      "outputs": []
+    }
+  },
+  "globalDependencies": []
+}
