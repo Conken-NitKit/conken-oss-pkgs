@@ -1,7 +1,7 @@
 # conken-oss-pkgs
 
 ## コミットルール
-このプロジェクトではコミットメッセージの品質統一のため、[commitlint](https://github.com/conventional-changelog/commitlint/) を使用しています。
+このプロジェクトではコミットメッセージの品質統一のため、[commitlint](https://github.com/conventional-changelog/commitlint/) を使用しています。<br>
 commitlintのルールではコミットメッセージが次の形式になっている必要があります。
 
 ```
@@ -37,5 +37,5 @@ scopeには「`変更した packages 配下の package 名` or `all`」を指定
 文章の先頭に大文字のアルファベットを利用しないでください。
 
 #### その他のルールについて
-その他のルールはこちらをご覧ください。
+その他のルールはこちらをご覧ください。<br>
 https://www.npmjs.com/package/@commitlint/config-conventional
