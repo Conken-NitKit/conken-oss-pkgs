@@ -1,3 +1,5 @@
+# conken-oss-pkgs
+
 ## コミットルール
 このプロジェクトではコミットメッセージの品質統一のため、[commitlint](https://github.com/conventional-changelog/commitlint/) を使用しています。
 commitlintのルールではコミットメッセージが次の形式になっている必要があります。
@@ -11,7 +13,7 @@ fix(frontend-react-next): fix some bugs
 chore(all): ciの設定
 ```
 
-### type について
+#### type について
 typeには次の11種類を入力することが出来ます。
 
 ```
@@ -28,12 +30,12 @@ typeには次の11種類を入力することが出来ます。
 - test: テストに関すること
 ```
 
-### scope について
-scopeには「変更した packages 配下の package 名 or all 」を指定してください。
+#### scope について
+scopeには「`変更した packages 配下の package 名` or `all`」を指定してください。
 
-### description について
+#### description について
 文章の先頭に大文字のアルファベットを利用しないでください。
 
-### その他のルールについて
+#### その他のルールについて
 その他のルールはこちらをご覧ください。
 https://www.npmjs.com/package/@commitlint/config-conventional
