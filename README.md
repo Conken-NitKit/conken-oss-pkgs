@@ -2,7 +2,7 @@
 
 ## コミットルール
 このプロジェクトではコミットメッセージの品質統一のため、[commitlint](https://github.com/conventional-changelog/commitlint/) を使用しています。<br>
-commitlintのルールではコミットメッセージが次の形式になっている必要があります。
+commitlint のルールではコミットメッセージが次の形式になっている必要があります。
 
 ```
 type(scope): description [flags]
@@ -14,7 +14,7 @@ chore(all): ciの設定
 ```
 
 #### type について
-typeには次の11種類を入力することが出来ます。
+type には次の11種類を入力することが出来ます。
 
 ```
 - build: ビルドに関すること
