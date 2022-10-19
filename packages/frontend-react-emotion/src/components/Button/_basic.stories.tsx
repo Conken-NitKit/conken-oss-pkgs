@@ -1,8 +1,8 @@
-import React from 'react';
-import { Basic } from './_basic';
+import React from "react";
+import { Basic } from "./_basic";
 
 export default {
-  title: 'Welcome',
+  title: "Welcome",
   component: Basic,
 };
 
