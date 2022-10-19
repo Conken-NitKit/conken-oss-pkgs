@@ -1,0 +1,39 @@
+{
+  "name": "@conken-oss-pkg/frontend-react-emotion",
+  "version": "0.0.0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Conken-NitKit/conken-oss-pkgs/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.12",
+    "@types/node": "^18.11.2",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@types/react": "^17.0.0 || ^18.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  }
+}
