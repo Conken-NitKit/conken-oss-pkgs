@@ -12,7 +12,8 @@
   "sideEffects": false,
   "scripts": {
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "new:fc": "hygen new fc"
   },
   "dependencies": {
     "@emotion/react": "^11.0.0",
