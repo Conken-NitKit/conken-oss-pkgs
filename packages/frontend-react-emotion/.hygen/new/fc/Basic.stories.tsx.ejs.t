@@ -2,11 +2,18 @@
 to: <%= abs_path %>/stories/Basic.stories.tsx
 ---
 import React from "react";
-import { <%= component_name %> } from "../index";
+import { <%= pascal_case %>, <%= pascal_case %>Color } from "../index";
 
 export default {
-  title: "<%= component_name %>/Basic",
-  component: <%= component_name %>.BASIC,
+  title: "<%= pascal_case %>/Basic",
+  component: <%= pascal_case %>.BASIC,
 };
 
-export const Basic<%= component_name %> = () => <<%= component_name %>.BASIC />;
+const color: <%= pascal_case %>Color.BASIC = {
+  TEXT: "#fff",
+  BACKGROUND: "#000",
+};
+
+export const Basic<%= pascal_case %> = () => (
+  <<%= pascal_case %>.BASIC color={color} />
+);

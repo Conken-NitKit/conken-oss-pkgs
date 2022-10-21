@@ -1,9 +1,12 @@
 ---
 to: <%= abs_path %>/index.ts
 ---
-import { Basic } from "./implements/Basic";
+import { Basic, BasicColor } from "./implements/Basic";
 
-// Note: key には全部大文字のスネークケースにする
-export const <%= component_name %> = {
+export const <%= pascal_case %> = {
   BASIC: Basic,
+};
+
+export namespace <%= pascal_case %>Color {
+  export type BASIC = BasicColor;
 };
