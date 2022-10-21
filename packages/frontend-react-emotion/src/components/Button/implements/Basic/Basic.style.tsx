@@ -11,15 +11,15 @@ export const buttonCss = (color: Color) => css`
   dispaly: flex;
   align-items: center;
   justify-content: center;
-  height: 48px;
-  padding: 0 16px;
+  width: 100%;
+  padding: 12px 16px;
   font-family: ${BASIC_FONT_FAMILY};
   font-size: 16px;
   border-radius: 8px;
   color: ${color.TEXT};
   border: ${color.TEXT} 1px solid;
   background-color: ${color.BACKGROUND};
-  hover: {
-    opacity: 0.8;
+  &:hover {
+    opacity: 0.7;
   }
 `;

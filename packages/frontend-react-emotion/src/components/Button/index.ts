@@ -1,5 +1,4 @@
-import { Color as BasicColor } from "./implements/Basic.style";
-import { Basic } from "./implements/Basic";
+import { Basic, BasicColor } from "./implements/Basic";
 
 export const Button = {
   BASIC: Basic,
