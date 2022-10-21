@@ -6,4 +6,4 @@ export const Button = {
 
 export namespace ButtonColor {
   export type BASIC = BasicColor;
-};
+}
