@@ -19,11 +19,7 @@ const TestComponent = (): JSX.Element => {
   }, []);
 
   return (
-    <Button.BASIC
-      color={color}
-      onClick={handleClick}
-      testId={TEST_ID}
-    >
+    <Button.BASIC color={color} onClick={handleClick} testId={TEST_ID}>
       {TEST_LABEL}
     </Button.BASIC>
   );
@@ -31,7 +27,7 @@ const TestComponent = (): JSX.Element => {
 
 it("BasicButton", () => {
   mount(<TestComponent />);
-  
+
   const key = getKeyByTestId(TEST_ID);
   const button = cy.get(key);
 
