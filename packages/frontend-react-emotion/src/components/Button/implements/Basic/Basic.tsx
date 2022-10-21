@@ -6,6 +6,7 @@ export type Props = {
   color: Color;
   disabled?: boolean;
   notAllowed?: boolean;
+  testId?: string;
   onClick?: VoidFunction;
 };
 
@@ -14,6 +15,7 @@ export const Basic = ({
   color,
   disabled = false,
   notAllowed = false,
+  testId,
   onClick,
 }: PropsWithChildren<Props>): JSX.Element => {
   const cursor = useMemo<CSS.Property.Cursor>(() => {
@@ -31,6 +33,7 @@ export const Basic = ({
       style={{ cursor }}
       css={buttonCss(color)}
       disabled={disabled || notAllowed}
+      data-test-id={testId}
       onClick={onClick}
     >
       {children}
