@@ -1,6 +1,6 @@
 <h1 align="center">frontend-react-emotion</h1>
 
-## インストー
+## インストール
 
 ### npm:
 
