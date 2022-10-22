@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import { mount } from "@cypress/react";
 
 import { Button, ButtonColor } from "../index";
-import { getSelectorByTestId } from "../../../utils/test";
 
 const TEST_ID = "test-mark";
 const TEST_LABEL = "Hello World";
@@ -28,8 +27,7 @@ const TestComponent = (): JSX.Element => {
 it("BasicButton", () => {
   mount(<TestComponent />);
 
-  const selector = getSelectorByTestId(TEST_ID);
-  const button = cy.get(selector);
+  const button = cy.getByTestId(TEST_ID);
 
   button.contains(TEST_LABEL);
 

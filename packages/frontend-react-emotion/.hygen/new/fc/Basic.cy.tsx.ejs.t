@@ -1,11 +1,10 @@
 ---
-to: <%= abs_path %>/test/Basic.test.tsx
+to: <%= abs_path %>/test/Basic.cy.tsx
 ---
 import React from "react";
 import { mount } from "@cypress/react";
 
 import { <%= pascal_case %>, <%= pascal_case %>Color } from "../index";
-import { getSelectorByTestId } from "../../../utils/test";
 
 const TEST_ID = "test-mark";
 const TEST_LABEL = "Hello World";
@@ -24,8 +23,7 @@ const TestComponent = (): JSX.Element => {
 it("Basic<%= pascal_case %>", () => {
   mount(<TestComponent />);
 
-  const selector = getSelectorByTestId(TEST_ID);
-  const button = cy.get(selector);
+  const <%= camel_case %> = cy.getByTestId(TEST_ID);
 
-  button.contains(TEST_LABEL);
+  <%= camel_case %>.contains(TEST_LABEL);
 });

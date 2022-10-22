@@ -13,8 +13,14 @@
     "storybook-static", 
     "cypress.config.ts",
     "vite.config.ts",
-    "**/*.cy.@(js|jsx|ts|tsx)", 
+    "**/*.cy.js", 
+    "**/*.cy.ts", 
+    "**/*.cy.jsx", 
+    "**/*.cy.tsx", 
+    "**/*.stories.js",
+    "**/*.stories.ts",
+    "**/*.stories.jsx",
+    "**/*.stories.tsx",
     "**/*.stories.mdx",
-    "**/*.stories.@(js|jsx|ts|tsx)"
   ],
 }
