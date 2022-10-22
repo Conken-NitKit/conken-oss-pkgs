@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { mount } from "@cypress/react";
 
 import { Button, ButtonColor } from "../index";
-import { getKeyByTestId } from "../../../utils/test";
+import { getSelectorByTestId } from "../../../utils/test";
 
 const TEST_ID = "test-mark";
 const TEST_LABEL = "Hello World";
@@ -28,11 +28,11 @@ const TestComponent = (): JSX.Element => {
 it("BasicButton", () => {
   mount(<TestComponent />);
 
-  const key = getKeyByTestId(TEST_ID);
-  const button = cy.get(key);
+  const selector = getSelectorByTestId(TEST_ID);
+  const button = cy.get(selector);
 
   button.contains(TEST_LABEL);
-  button.click();
 
+  button.click();
   cy.log(TEST_EVENT_LOG);
 });
