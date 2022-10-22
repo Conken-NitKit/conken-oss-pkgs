@@ -1,18 +1,21 @@
 <h1 align="center">frontend-react-emotion</h1>
 
-## インストールn
+## インストー
 
 ### npm:
+
 ```sh
 npm install @conken-oss-pkg/frontend-react-emotion
 ```
 
 ### yarn:
+
 ```sh
 yarn add @conken-oss-pkg/frontend-react-emotion
 ```
 
 ### 利用方法
+
 このライブラリで提供されるコンポーネントはコンポーネント名とタイプの組合わせることで使いたい
 
 - コンポーネント名 (`Button`, `Calendar` などのどんな部品なのかを指定します)
@@ -33,9 +36,7 @@ const style: ComponentStyle.BASIC = {
 };
 
 export const MyComponent = (): JSX.Element => {
-  return (
-    <Component.BASIC customizableStyle={style} />
-  );
+  return <Component.BASIC customizableStyle={style} />;
 };
 ```
 
@@ -53,7 +54,7 @@ const style: ButtonStyle.BASIC = {
 
 export type Props = {
   label: string;
-}
+};
 
 export const MyButton = ({ label }: Props): JSX.Element => {
   const handleClick = useCallback(() => {

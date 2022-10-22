@@ -19,7 +19,11 @@ const TestComponent = (): JSX.Element => {
   }, []);
 
   return (
-    <Button.BASIC customizableStyle={style} onClick={handleClick} testId={TEST_ID}>
+    <Button.BASIC
+      customizableStyle={style}
+      onClick={handleClick}
+      testId={TEST_ID}
+    >
       {TEST_LABEL}
     </Button.BASIC>
   );

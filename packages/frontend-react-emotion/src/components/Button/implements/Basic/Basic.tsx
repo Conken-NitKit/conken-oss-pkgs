@@ -35,8 +35,8 @@ export const Basic = ({
       disabled={disabled || notAllowed}
       data-test-id={testId}
       onClick={onClick}
-    >,
-      {children}
+    >
+      ,{children}
     </button>
   );
 };
