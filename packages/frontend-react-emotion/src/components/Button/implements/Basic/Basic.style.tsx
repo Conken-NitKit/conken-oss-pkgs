@@ -5,15 +5,12 @@ export type Color = {
   BACKGROUND: string;
 };
 
-const BASIC_FONT_FAMILY = `'ui-sans-serif', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'`;
-
 export const buttonCss = (color: Color): SerializedStyles => css`
   dispaly: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   padding: 12px 16px;
-  font-family: ${BASIC_FONT_FAMILY};
   font-size: 16px;
   border-radius: 8px;
   color: ${color.TEXT};
