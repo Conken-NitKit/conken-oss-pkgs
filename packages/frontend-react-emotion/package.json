@@ -12,8 +12,8 @@
   "sideEffects": false,
   "scripts": {
     "test": "cypress run --component",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook",
     "new:fc": "hygen new fc"
   },
   "dependencies": {

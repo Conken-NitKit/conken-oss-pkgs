@@ -1,3 +1,8 @@
 node_modules/
+
+# cypress
 cypress/screenshots/
 cypress/videos/
+
+# storybook-build
+storybook-static/
