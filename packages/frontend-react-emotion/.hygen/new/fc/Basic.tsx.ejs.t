@@ -1,7 +1,6 @@
 ---
 to: <%= abs_path %>/implements/Basic/Basic.tsx
 ---
-import React from "react";
 import { <%= camel_case %>Css, Style } from "./Basic.style";
 
 export type Props = {

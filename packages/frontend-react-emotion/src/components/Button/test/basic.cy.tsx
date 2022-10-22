@@ -1,5 +1,5 @@
 import { mount } from "@cypress/react";
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 
 import { Button, ButtonStyle } from "../index";
 

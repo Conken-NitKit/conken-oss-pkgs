@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, ButtonStyle } from "../index";
 
 export default {

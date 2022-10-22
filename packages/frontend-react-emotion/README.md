@@ -43,7 +43,7 @@ export const MyComponent = (): JSX.Element => {
 実際の利用例は以下のような形です。
 
 ```tsx
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { Button, ButtonStyle } from "@conken-oss-pkg/frontend-react-emotion";
 
 const style: ButtonStyle.BASIC = {

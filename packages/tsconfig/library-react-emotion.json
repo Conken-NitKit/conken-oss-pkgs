@@ -2,6 +2,7 @@
   "extends": "./library-react.json",
   "display": "React Emotion Component Library",
   "compilerOptions": {
+    "jsxImportSource": "@emotion/react",
     "types": ["@emotion/react/types/css-prop"]
   }
 }

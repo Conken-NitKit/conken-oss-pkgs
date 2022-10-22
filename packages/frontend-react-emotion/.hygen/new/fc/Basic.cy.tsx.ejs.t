@@ -2,7 +2,6 @@
 to: <%= abs_path %>/test/Basic.cy.tsx
 ---
 import { mount } from "@cypress/react";
-import React from "react";
 
 import { <%= pascal_case %>, <%= pascal_case %>Style } from "../index";
 

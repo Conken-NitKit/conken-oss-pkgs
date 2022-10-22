@@ -1,7 +1,6 @@
 ---
 to: <%= abs_path %>/stories/Basic.stories.tsx
 ---
-import React from "react";
 import { <%= pascal_case %>, <%= pascal_case %>Style } from "../index";
 
 export default {

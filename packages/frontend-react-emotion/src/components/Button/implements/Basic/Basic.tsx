@@ -1,5 +1,5 @@
 import type * as CSS from "csstype";
-import React, { useMemo, PropsWithChildren } from "react";
+import { useMemo, PropsWithChildren } from "react";
 import { buttonCss, Style } from "./Basic.style";
 
 export type Props = {
