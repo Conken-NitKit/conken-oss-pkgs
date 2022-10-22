@@ -3,7 +3,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: ['plugin:@typescript-eslint/recommended'],
   rules: {
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-empty-function": "error",
     "@typescript-eslint/ban-ts-comment": "error",

@@ -1,22 +1,23 @@
 ---
 to: <%= abs_path %>/test/Basic.cy.tsx
 ---
-import React from "react";
 import { mount } from "@cypress/react";
+import React from "react";
 
-import { <%= pascal_case %>, <%= pascal_case %>Color } from "../index";
+import { <%= pascal_case %>, <%= pascal_case %>Style } from "../index";
 
 const TEST_ID = "test-mark";
 const TEST_LABEL = "Hello World";
 
-const color: <%= pascal_case %>Color.BASIC = {
+const style: <%= pascal_case %>Style.BASIC = {
   TEXT: "#fff",
   BACKGROUND: "#000",
+  FONT_FAMILY: "sans-serif",
 };
 
 const TestComponent = (): JSX.Element => {
   return (
-    <<%= pascal_case %>.BASIC color={color} testId={TEST_ID} />
+    <<%= pascal_case %>.BASIC customizableStyle={style} testId={TEST_ID} />
   );
 };
 

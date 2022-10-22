@@ -1,16 +1,17 @@
 import React from "react";
-import { Button, ButtonColor } from "../index";
+import { Button, ButtonStyle } from "../index";
 
 export default {
   title: "Button/Basic",
   component: Button.BASIC,
 };
 
-const color: ButtonColor.BASIC = {
+const style: ButtonStyle.BASIC = {
   TEXT: "#fff",
   BACKGROUND: "#000",
+  FONT_FAMILY: "sans-serif",
 };
 
 export const BasicButton = (): JSX.Element => (
-  <Button.BASIC color={color}>Hello World</Button.BASIC>
+  <Button.BASIC customizableStyle={style}>Hello World</Button.BASIC>
 );

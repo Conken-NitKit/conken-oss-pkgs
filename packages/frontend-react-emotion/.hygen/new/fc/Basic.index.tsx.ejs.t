@@ -1,5 +1,7 @@
 ---
 to: <%= abs_path %>/implements/Basic/index.ts
 ---
-export type { Color as BasicColor } from "./Basic.style";
 export { Basic } from "./Basic";
+
+export type { Props as BasicProps } from "./Basic";
+export type { Style as BasicStyle } from "./Basic.style";

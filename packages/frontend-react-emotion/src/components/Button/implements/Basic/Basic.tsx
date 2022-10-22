@@ -1,9 +1,9 @@
 import type * as CSS from "csstype";
 import React, { useMemo, PropsWithChildren } from "react";
-import { buttonCss, Color } from "./Basic.style";
+import { buttonCss, Style } from "./Basic.style";
 
 export type Props = {
-  color: Color;
+  customizableStyle: Style;
   disabled?: boolean;
   notAllowed?: boolean;
   testId?: string;
@@ -12,7 +12,7 @@ export type Props = {
 
 export const Basic = ({
   children,
-  color,
+  customizableStyle,
   disabled = false,
   notAllowed = false,
   testId,
@@ -31,11 +31,11 @@ export const Basic = ({
   return (
     <button
       style={{ cursor }}
-      css={buttonCss(color)}
+      css={buttonCss(customizableStyle)}
       disabled={disabled || notAllowed}
       data-test-id={testId}
       onClick={onClick}
-    >
+    >,
       {children}
     </button>
   );

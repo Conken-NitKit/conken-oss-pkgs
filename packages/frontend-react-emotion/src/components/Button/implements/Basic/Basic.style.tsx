@@ -1,11 +1,12 @@
 import { css, SerializedStyles } from "@emotion/react";
 
-export type Color = {
+export type Style = {
   TEXT: string;
   BACKGROUND: string;
+  FONT_FAMILY: string;
 };
 
-export const buttonCss = (color: Color): SerializedStyles => css`
+export const buttonCss = (style: Style): SerializedStyles => css`
   dispaly: flex;
   align-items: center;
   justify-content: center;
@@ -13,9 +14,10 @@ export const buttonCss = (color: Color): SerializedStyles => css`
   padding: 12px 16px;
   font-size: 16px;
   border-radius: 8px;
-  color: ${color.TEXT};
-  border: ${color.TEXT} 1px solid;
-  background-color: ${color.BACKGROUND};
+  font-family: ${style.FONT_FAMILY};
+  color: ${style.TEXT};
+  border: ${style.TEXT} 1px solid;
+  background-color: ${style.BACKGROUND};
   &:hover {
     opacity: 0.7;
   }

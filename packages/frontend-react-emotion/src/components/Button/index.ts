@@ -1,9 +1,13 @@
-import { Basic, BasicColor } from "./implements/Basic";
+import { Basic, BasicProps, BasicStyle } from "./implements/Basic";
 
 export const Button = {
   BASIC: Basic,
 };
 
-export namespace ButtonColor {
-  export type BASIC = BasicColor;
+export namespace ButtonProps {
+  export type Basic = BasicProps;
+}
+
+export namespace ButtonStyle {
+  export type BASIC = BasicStyle;
 }

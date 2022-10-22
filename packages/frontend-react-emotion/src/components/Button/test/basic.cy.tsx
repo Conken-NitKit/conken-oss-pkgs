@@ -1,15 +1,16 @@
 import { mount } from "@cypress/react";
 import React, { useCallback } from "react";
 
-import { Button, ButtonColor } from "../index";
+import { Button, ButtonStyle } from "../index";
 
 const TEST_ID = "test-mark";
 const TEST_LABEL = "Hello World";
 const TEST_EVENT_LOG = "clicked!!";
 
-const color: ButtonColor.BASIC = {
+const style: ButtonStyle.BASIC = {
   TEXT: "#fff",
   BACKGROUND: "#000",
+  FONT_FAMILY: "sans-serif",
 };
 
 const TestComponent = (): JSX.Element => {
@@ -18,7 +19,7 @@ const TestComponent = (): JSX.Element => {
   }, []);
 
   return (
-    <Button.BASIC color={color} onClick={handleClick} testId={TEST_ID}>
+    <Button.BASIC customizableStyle={style} onClick={handleClick} testId={TEST_ID}>
       {TEST_LABEL}
     </Button.BASIC>
   );
