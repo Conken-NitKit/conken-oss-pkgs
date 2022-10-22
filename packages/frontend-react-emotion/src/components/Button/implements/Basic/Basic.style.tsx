@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css, SerializedStyles } from "@emotion/react";
 
 export type Color = {
   TEXT: string;
@@ -7,7 +7,7 @@ export type Color = {
 
 const BASIC_FONT_FAMILY = `'ui-sans-serif', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'`;
 
-export const buttonCss = (color: Color) => css`
+export const buttonCss = (color: Color): SerializedStyles => css`
   dispaly: flex;
   align-items: center;
   justify-content: center;

@@ -22,6 +22,8 @@
   "scripts": {
     "build": "rimraf ./lib && tsc --project tsconfig.build.json",
     "prepublishOnly": "npm run build",
+    "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
     "test": "cypress run --component",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",

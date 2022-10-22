@@ -11,6 +11,6 @@ const color: ButtonColor.BASIC = {
   BACKGROUND: "#000",
 };
 
-export const BasicButton = () => (
+export const BasicButton = (): JSX.Element => (
   <Button.BASIC color={color}>Hello World</Button.BASIC>
 );
