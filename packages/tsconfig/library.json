@@ -6,7 +6,6 @@
     "target": "es5",
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "outDir": "dist",
     "allowJs": false
   }
 }

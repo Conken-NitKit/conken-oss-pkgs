@@ -9,8 +9,19 @@
     "react",
     "react-component"
   ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "source": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/typescript/index.d.ts",
   "sideEffects": false,
   "scripts": {
+    "build": "rimraf ./lib && tsc --project tsconfig.build.json",
+    "prepublishOnly": "npm run build",
     "test": "cypress run --component",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
@@ -46,6 +57,7 @@
     "csstype": "^3.1.1",
     "cypress": "^10.10.0",
     "hygen": "^6.2.11",
+    "rimraf": "^3.0.2",
     "typescript": "^4.8.4",
     "vite": "^3.1.8"
   },

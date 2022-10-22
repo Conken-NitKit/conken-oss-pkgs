@@ -1,0 +1,20 @@
+{
+  "extends": "../tsconfig/library-react-emotion.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "./lib/typescript",
+    "outDir": "./lib",
+  },
+  "exclude": [
+    "cypress",
+    "lib",
+    "node_modules", 
+    "storybook-static", 
+    "cypress.config.ts",
+    "vite.config.ts",
+    "**/*.cy.@(js|jsx|ts|tsx)", 
+    "**/*.stories.mdx",
+    "**/*.stories.@(js|jsx|ts|tsx)"
+  ],
+}
