@@ -8,6 +8,9 @@
     "build": {
       "outputs": [".next/**"]
     },
+    "build-storybook": {
+      "outputs": []
+    },
     "lint": {
       "output": []
     },
