@@ -11,6 +11,9 @@
     "build-storybook": {
       "outputs": []
     },
+    "test": {
+      "output": []
+    },
     "lint": {
       "output": []
     },
@@ -18,9 +21,6 @@
       "output": []
     },
     "typecheck": {
-      "output": []
-    },
-    "test": {
       "output": []
     }
   }
