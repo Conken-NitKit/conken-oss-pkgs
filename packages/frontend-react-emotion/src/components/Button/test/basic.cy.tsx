@@ -1,11 +1,10 @@
-import { mount } from "@cypress/react";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
 import { Button, ButtonStyle } from "../index";
 
 const TEST_ID = "test-mark";
-const TEST_LABEL = "Hello World";
-const TEST_EVENT_LOG = "clicked!!";
+const TEST_LABEL_FIRST = "not clicked";
+const TEST_EVENT_SECOND = "clicked!!";
 
 const style: ButtonStyle.BASIC = {
   TEXT: "#fff",
@@ -14,8 +13,10 @@ const style: ButtonStyle.BASIC = {
 };
 
 const TestComponent = (): JSX.Element => {
+  const [label, setLabel] = useState(TEST_LABEL_FIRST);
+
   const handleClick = useCallback(() => {
-    console.log(TEST_EVENT_LOG);
+    setLabel(TEST_EVENT_SECOND);
   }, []);
 
   return (
@@ -24,24 +25,25 @@ const TestComponent = (): JSX.Element => {
       onClick={handleClick}
       testId={TEST_ID}
     >
-      {TEST_LABEL}
+      {label}
     </Button.BASIC>
   );
 };
 
 it("BasicButton | 表示されてるラベルが正しいことを確認", () => {
-  mount(<TestComponent />);
+  cy.mount(<TestComponent />);
 
   const button = cy.getByTestId(TEST_ID);
 
-  button.contains(TEST_LABEL);
+  button.should("have.text", TEST_LABEL_FIRST);
 });
 
 it("BasicButton | クリックイベントが発火されていることを確認", () => {
-  mount(<TestComponent />);
+  cy.mount(<TestComponent />);
 
   const button = cy.getByTestId(TEST_ID);
 
+  button.should("have.text", TEST_LABEL_FIRST);
   button.click();
-  cy.log(TEST_EVENT_LOG);
+  button.should("have.text", TEST_EVENT_SECOND);
 });

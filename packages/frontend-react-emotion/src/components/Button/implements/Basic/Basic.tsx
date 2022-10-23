@@ -36,7 +36,7 @@ export const Basic = ({
       data-test-id={testId}
       onClick={onClick}
     >
-      ,{children}
+      {children}
     </button>
   );
 };

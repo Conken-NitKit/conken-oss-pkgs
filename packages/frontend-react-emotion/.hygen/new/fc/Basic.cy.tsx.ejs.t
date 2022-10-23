@@ -25,5 +25,5 @@ it("Basic<%= pascal_case %> | 表示されてるラベルが正しいことを�
 
   const <%= camel_case %> = cy.getByTestId(TEST_ID);
 
-  <%= camel_case %>.contains(TEST_LABEL);
+  <%= camel_case %>.should("have.text", TEST_LABEL);
 });
