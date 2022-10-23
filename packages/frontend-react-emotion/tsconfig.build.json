@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig/library-react-emotion.json",
+  "extends": "../tsconfig/configs/library-react-emotion.json",
   "compilerOptions": {
     "baseUrl": ".",
     "declaration": true,
