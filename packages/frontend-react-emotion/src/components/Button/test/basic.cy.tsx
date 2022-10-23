@@ -29,12 +29,18 @@ const TestComponent = (): JSX.Element => {
   );
 };
 
-it("BasicButton", () => {
+it("BasicButton | 表示されてるラベルが正しいことを確認", () => {
   mount(<TestComponent />);
 
   const button = cy.getByTestId(TEST_ID);
 
   button.contains(TEST_LABEL);
+});
+
+it("BasicButton | クリックイベントが発火されていることを確認", () => {
+  mount(<TestComponent />);
+
+  const button = cy.getByTestId(TEST_ID);
 
   button.click();
   cy.log(TEST_EVENT_LOG);
