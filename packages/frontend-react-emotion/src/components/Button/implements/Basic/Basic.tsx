@@ -1,5 +1,5 @@
 import type * as CSS from "csstype";
-import { useMemo, PropsWithChildren } from "react";
+import { useMemo, PropsWithChildren, useCallback } from "react";
 import { buttonCss, Style } from "./Basic.style";
 
 export type Props = {
@@ -28,13 +28,21 @@ export const Basic = ({
     return "pointer";
   }, [disabled, notAllowed]);
 
+  // Note: htmlのdisabled属性は、devtoolで変更可能なので、より堅牢にするために、js側でも制御する。
+  const handleClick = useCallback(() => {
+    if (disabled || notAllowed) {
+      return;
+    }
+    onClick?.();
+  }, [disabled, notAllowed, onClick]);
+
   return (
     <button
       style={{ cursor }}
       css={buttonCss(customizableStyle)}
       disabled={disabled || notAllowed}
       data-test-id={testId}
-      onClick={onClick}
+      onClick={handleClick}
     >
       {children}
     </button>
