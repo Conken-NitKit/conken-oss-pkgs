@@ -1,4 +1,7 @@
-<h1 align="center">frontend-react-emotion</h1>
+<h1 align="center">@conken-oss-pkg/frontend-react-emotion</h1>
+
+## リンク
+- [開発者ガイド](/README_DEVELOPERS/md)
 
 ## インストール
 
@@ -25,7 +28,7 @@ yarn add @conken-oss-pkg/frontend-react-emotion
 <コンポーネント名.タイプ>XXX</コンポーネント名.タイプ>
 ```
 
-また、各コンポーネントは変更可能なスタイルをオブジェクトとして受け取ることでカスタマイズ可能です。
+また、各コンポーネントは変更可能なスタイルをオブジェクトとして受け取ることでカスタマイズ可能です。<br>
 このオブジェクトの方もコンポーネント同様に `{コンポーネント名}Style.{タイプ}` というように指定する子利用可能です。
 
 ```tsx

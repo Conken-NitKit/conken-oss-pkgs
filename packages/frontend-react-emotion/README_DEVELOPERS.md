@@ -77,7 +77,7 @@ npm ci
 
 ## コンポーネントの雛形の自動生成
 
-以下のコマンドを実行することで、コンポーネント用のファイ群を自動で生成できます。
+以下のコマンドを実行することで、コンポーネント用のファイ群を自動で生成できます。<br>
 このコマンドを実行すると「コンポーネント名」の入力を要求されます。
 
 ```sh
@@ -93,7 +93,7 @@ $ npm run new:fc -w @conken-oss-pkg/frontend-react-emotion
 ? What is the component name? ›
 ```
 
-コンポーネント名を入力すると以下のファイル群が一気に生成されます。
+コンポーネント名を入力すると以下のファイル群が一気に生成されます。<br>
 生成ファイルの各役割については上のディレクトリ構成から確認してください。
 
 ```sh
@@ -111,7 +111,7 @@ Loaded templates: hygen
 
 ## 作成したコンポーネントの動作確認
 
-作成したコンポーネントは [StoryBook](https://storybook.js.org/) で動作確認できます。
+作成したコンポーネントは [StoryBook](https://storybook.js.org/) で動作確認できます。<br>
 StoryBook の起動には以下のコマン実行したのち、[http://localhost:9009/](http://localhost:9009/) にアクセスすることで起動可能です。
 
 ```sh
@@ -147,7 +147,7 @@ export const BasicComponent = (): JSX.Element => (
 
 ## 自動テスト
 
-作成したコンポーネントの Unit テストは [Cypress](https://docs.cypress.io/guides/component-testing/testing-react#Selecting-the-Stepper-Component) で行なっています。
+作成したコンポーネントの Unit テストは [Cypress](https://docs.cypress.io/guides/component-testing/testing-react#Selecting-the-Stepper-Component) で行なっています。<br>
 Unit テストについて: [ユニットテストってどんなもの？](https://rightcode.co.jp/blog/information-technology/what-unit-test-syain)
 
 テストの実行は以下のコマンドで可能です。
