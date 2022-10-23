@@ -20,7 +20,7 @@ const TestComponent = (): JSX.Element => {
   );
 };
 
-it("Basic<%= pascal_case %>", () => {
+it("Basic<%= pascal_case %> | 表示されてるラベルが正しいことを確認", () => {
   mount(<TestComponent />);
 
   const <%= camel_case %> = cy.getByTestId(TEST_ID);
