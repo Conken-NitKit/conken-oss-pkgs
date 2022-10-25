@@ -1,7 +1,7 @@
 import { mount, unmount } from "./commands/react18";
 import { getByTestId } from "./commands/utils";
 
-// Note: コマンドを Cypress.Commands ネームスペースに追加します。
+// 副作用: コマンドを Cypress.Commands ネームスペースに追加します。
 import "./sideEffect";
 
 declare global {
