@@ -4,8 +4,8 @@ export const getByTestId = (
 ): Cypress.Chainable<JQuery<HTMLElement>> => {
   const selector = `[data-test-id="${testId}"]`;
   return cy.get(selector, options);
-}
+};
 
 Cypress.Commands.addAll({
   getByTestId,
-})
+});

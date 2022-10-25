@@ -1,8 +1,8 @@
-import { mount, unmount } from './commands/react18';
-import { getByTestId } from './commands/utils';
+import { mount, unmount } from "./commands/react18";
+import { getByTestId } from "./commands/utils";
 
 // Note: コマンドを Cypress.Commands ネームスペースに追加します。
-import './sideEffect';
+import "./sideEffect";
 
 declare global {
   namespace Cypress {
