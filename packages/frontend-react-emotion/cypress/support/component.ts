@@ -1,14 +1,15 @@
-import { mount } from "cypress/react18";
-import "./commands/utils";
+import { mount, unmount } from './commands/react18';
+import { getByTestId } from './commands/utils';
+
+// Note: コマンドを Cypress.Commands ネームスペースに追加します。
+import './sideEffect';
 
 declare global {
   namespace Cypress {
     interface Chainable {
       mount: typeof mount;
-      getByTestId: (
-        testId: string,
-        options?: Parameters<Cypress.Chainable["get"]>[1]
-      ) => Chainable<JQuery<HTMLElement>>;
+      unmount: typeof unmount;
+      getByTestId: typeof getByTestId;
     }
   }
 }
