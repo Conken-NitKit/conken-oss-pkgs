@@ -6,16 +6,24 @@
       "cache": false
     },
     "build": {
-      "outputs": [".next/**"]
+      "dependsOn": ["^build"],
+      "outputs": ["build/**"]
+    },
+    "build-storybook": {
+      "dependsOn": ["^build"],
+      "outputs": ["storybook-static/**"]
+    },
+    "test": {
+      "outputs": []
     },
     "lint": {
-      "output": []
+      "outputs": []
     },
     "lint:fix": {
-      "output": []
+      "outputs": []
     },
     "typecheck": {
-      "output": []
+      "outputs": []
     }
   }
 }

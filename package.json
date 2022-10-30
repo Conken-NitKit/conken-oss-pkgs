@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
+    "build-storybook": "turbo run build-storybook",
     "fix:all": "run-s lint:fix format:fix typecheck",
+    "test": "turbo run test",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "format": "prettier --check \"**/*.{ts,tsx,md}\"",

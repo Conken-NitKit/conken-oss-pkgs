@@ -1,12 +1,11 @@
 {
-  "extends": "./base.json",
+  "extends": "./common.json",
   "display": "TS Library",
   "compilerOptions": {
     "lib": ["es6", "dom"],
     "target": "es5",
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "outDir": "dist",
     "allowJs": false
   }
 }

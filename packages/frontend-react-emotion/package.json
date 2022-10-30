@@ -1,0 +1,73 @@
+{
+  "name": "@conken-oss-pkg/frontend-react-emotion",
+  "version": "0.0.0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Conken-NitKit/conken-oss-pkgs/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "source": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "rimraf ./lib && tsc --project tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
+    "test": "cypress run --component",
+    "storybook": "start-storybook -p 9009",
+    "typecheck": "tsc --noEmit",
+    "build-storybook": "build-storybook",
+    "new:fc": "hygen new fc"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-refresh": "^0.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@cypress/react": "^6.2.0",
+    "@cypress/vite-dev-server": "^3.3.1",
+    "@emotion/babel-preset-css-prop": "^11.10.0",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.12",
+    "@types/node": "^18.11.2",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "babel-loader": "^8.2.5",
+    "csstype": "^3.1.1",
+    "cypress": "^10.10.0",
+    "hygen": "^6.2.11",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@types/react": "^17.0.0 || ^18.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  }
+}
