@@ -2,7 +2,7 @@
 
 ## リンク
 
-- [開発者ガイド](/README_DEVELOPERS/md)
+- [開発者ガイド](/packages/frontend-react-emotion/README_DEVELOPERS.md)
 
 ## インストール
 
