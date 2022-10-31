@@ -23,6 +23,6 @@ jobs:
         run: npm run build
 
       - name: Publish "frontend-react-emotion"
-        run: npm publish -w @conken-oss-pkgs/frontend-react-emotion
+        run: npm publish -w packages/frontend-react-emotion/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
