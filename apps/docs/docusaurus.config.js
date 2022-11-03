@@ -39,13 +39,6 @@ const config = {
           editUrl:
             "https://github.com/Conken-NitKit/conken-oss-pkgs/tree/main/apps/docusaurus-for-pkgs",
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/Conken-NitKit/conken-oss-pkgs/tree/main/apps/docusaurus-for-pkgs",
-        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -64,12 +57,17 @@ const config = {
         },
         items: [
           {
-            to: "docs",
+            to: "docs/onboarding",
             activeBasePath: "docs",
-            label: "開発者向けドキュメント",
+            label: "オンボーディング",
             position: "left",
           },
-          { to: "/blog", label: "組織戦略", position: "left" },
+          {
+            to: "docs/programing-principle/",
+            activeBasePath: "docs",
+            label: "開発者向け",
+            position: "left",
+          },
           {
             href: "https://github.com/conken-nitkit",
             label: "GitHub Org",
