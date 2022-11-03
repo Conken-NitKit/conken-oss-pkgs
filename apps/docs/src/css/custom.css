@@ -14,6 +14,7 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
+  --ifm-menu-l2-font-size: 0.8rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -27,4 +28,13 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.theme-doc-sidebar-item-link-level-2 > .menu__link {
+  color: var(--ifm-menu-color);
+  flex: 1;
+  font-size: var(--ifm-menu-l2-font-size);
+  line-height: 1.25;
+  padding: var(--ifm-menu-link-padding-vertical)
+    var(--ifm-menu-link-padding-horizontal);
 }
