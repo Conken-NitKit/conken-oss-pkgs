@@ -14,5 +14,8 @@
   "source": "src/index.ts",
   "main": "lib/index.js",
   "types": "lib/typescript/index.d.ts",
-  "sideEffects": false
+  "sideEffects": false,
+  "dependencies": {
+    "zod": "^3.19.1"
+  }
 }
