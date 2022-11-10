@@ -1,5 +1,5 @@
 {
-  "extends": "./library-react.json",
+  "extends": "@conken-oss-pkgs/tsconfig/library-react",
   "display": "React Emotion Component Library",
   "compilerOptions": {
     "jsxImportSource": "@emotion/react",
