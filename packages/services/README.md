@@ -38,7 +38,6 @@ src
 └── shared  # 共通のコアロジックや、ベースクラスなどを配置
     ├── core
     │   └── xxx.ts
-    └── domain
-        └── ValueObject # 値オブジェクトを定義
-            └── Id.ts
+    └── ValueObject # 値オブジェクトを定義
+        └── Id.ts
 ```

@@ -1,12 +1,11 @@
 import { z } from "zod";
-import { Result } from "~/shared/core/Result";
-import { ValueObject } from "~/shared/core/ValueObject";
+import { Core } from "~/core";
 
 const idSchema = z.string().uuid();
 
 export type IdValue = z.infer<typeof idSchema>;
 
-export class Id extends ValueObject<IdValue> {
+export class Id extends Core.ValueObject<IdValue> {
   validator = (value: IdValue) => {
     return idSchema.safeParse(value);
   };
@@ -19,14 +18,14 @@ export namespace Id {
    * @param displayName エラー時に表示する名前
    * @returns Id のインスタンスの生成結果 (成功 or 失敗)
    */
-  export const create = (value: IdValue, displayName: string): Result<Id> => {
+  export const create = (value: IdValue, displayName: string): Core.Result<Id> => {
     const id = new Id(value);
 
     const { success } = id.isValid();
     if (!success) {
-      return Result.failure(new Error(`Invalid ${displayName}, id: ${value}`));
+      return Core.Result.failure(new Error(`Invalid ${displayName}, id: ${value}`));
     }
 
-    return Result.success(id);
+    return Core.Result.success(id);
   };
 }
