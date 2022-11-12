@@ -3,18 +3,11 @@ export type Validator<T> = (value: T) => { success: boolean };
 export abstract class ValueObject<T> {
   abstract validator: Validator<T>;
 
-  constructor(
-    protected readonly value: T,
-    protected readonly objectName: string
-  ) {
-    const { success } = this.validate();
-    if (!success) {
-      throw new Error(`Invalid ${this.objectName}`);
-    }
+  constructor(protected readonly value: T) {
     Object.freeze(this);
   }
 
-  private validate() {
+  isValid() {
     return this.validator(this.value);
   }
 
