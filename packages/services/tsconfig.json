@@ -1,0 +1,9 @@
+{
+  "extends": "@conken-oss-pkgs/tsconfig/library",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+}

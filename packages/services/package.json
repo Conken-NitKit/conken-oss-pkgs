@@ -17,5 +17,9 @@
   "sideEffects": false,
   "dependencies": {
     "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@conken-oss-pkgs/eslint-config": "*",
+    "@conken-oss-pkgs/tsconfig": "*"
   }
 }

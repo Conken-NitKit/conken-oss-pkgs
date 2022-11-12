@@ -1,16 +1,12 @@
-import { z } from 'zod';
+import { z } from "zod";
+import { ValueObject } from "~/shared/core/valueObject";
 
-export const idSchema = z.string().uuid();
+const idSchema = z.string().uuid();
 
 export type IdValue = z.infer<typeof idSchema>;
 
-export class Id {
-  constructor(public readonly value: IdValue) {
-    idSchema.parse(value);
-    Object.freeze(this);
-  }
-
-  toString(): string {
-    return this.value;
-  }
+export class Id extends ValueObject<IdValue> {
+  validator = (value: IdValue) => {
+    return idSchema.safeParse(value);
+  };
 }
