@@ -41,6 +41,8 @@
     "@babel/preset-env": "^7.19.4",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
+    "@conken-oss-pkgs/eslint-config": "*",
+    "@conken-oss-pkgs/tsconfig": "*",
     "@cypress/react": "^6.2.0",
     "@cypress/vite-dev-server": "^3.3.1",
     "@emotion/babel-preset-css-prop": "^11.10.0",
