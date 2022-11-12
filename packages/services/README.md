@@ -15,7 +15,7 @@ src
 |
 ├── shared  # 複数のサービスで使われうるドメイン
 |   └─ ValueObject # 値オブジェクトを定義
-|       └── Id.ts
+|      └── Id.ts
 |
 └── subdomains  # それぞれ独立して成立するサービスのドメイン
     └── user
