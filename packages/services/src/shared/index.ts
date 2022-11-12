@@ -3,7 +3,7 @@ import { ValueObject as _ValueObject } from "~/shared/core/ValueObject";
 import {
   Id as _Id,
   IdValue as _IdValue,
-} from "~/shared/domains/valueObjects/id";
+} from "~/shared/domains/valueObjects/Id";
 
 export namespace Shared {
   /**

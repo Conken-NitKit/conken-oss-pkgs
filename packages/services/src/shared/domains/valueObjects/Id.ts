@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Result } from "~/shared/core/result";
+import { Result } from "~/shared/core/Result";
 import { ValueObject } from "~/shared/core/ValueObject";
 
 const idSchema = z.string().uuid();
