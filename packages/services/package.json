@@ -18,6 +18,13 @@
   "dependencies": {
     "zod": "^3.19.1"
   },
+  "scripts": {
+    "build": "rimraf ./lib && tsc --project tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@conken-oss-pkgs/eslint-config": "*",
     "@conken-oss-pkgs/tsconfig": "*"
