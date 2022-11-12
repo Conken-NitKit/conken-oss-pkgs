@@ -15,15 +15,15 @@
   "main": "lib/index.js",
   "types": "lib/typescript/index.d.ts",
   "sideEffects": false,
-  "dependencies": {
-    "zod": "^3.19.1"
-  },
   "scripts": {
     "build": "rimraf ./lib && tsc --project tsconfig.build.json",
     "prepublishOnly": "npm run build",
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
     "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@conken-oss-pkgs/eslint-config": "*",

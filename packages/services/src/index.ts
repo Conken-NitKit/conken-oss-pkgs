@@ -1,4 +1,2 @@
-/**
- * 共通のコアロジックや、ベースクラス
- */
+export { Core } from "~/core";
 export { Shared } from "~/shared";
