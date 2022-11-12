@@ -13,12 +13,18 @@ export class Id extends ValueObject<IdValue> {
 }
 
 export namespace Id {
-  export const create = (value: IdValue, name: string): Result<Id> => {
+  /**
+   * Id のインスタンスの生成結果を作成する便利関数
+   * @param value Id の値
+   * @param displayName エラー時に表示する名前
+   * @returns Id のインスタンスの生成結果 (成功 or 失敗)
+   */
+  export const create = (value: IdValue, displayName: string): Result<Id> => {
     const id = new Id(value);
 
     const { success } = id.isValid();
     if (!success) {
-      return Result.failure(new Error(`Invalid ${name} id: ${value}`));
+      return Result.failure(new Error(`Invalid ${displayName}, id: ${value}`));
     }
 
     return Result.success(id);
