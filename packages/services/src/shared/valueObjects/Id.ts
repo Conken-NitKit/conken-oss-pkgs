@@ -18,12 +18,17 @@ export namespace Id {
    * @param displayName エラー時に表示する名前
    * @returns Id のインスタンスの生成結果 (成功 or 失敗)
    */
-  export const create = (value: IdValue, displayName: string): Core.Result<Id> => {
+  export const create = (
+    value: IdValue,
+    displayName: string
+  ): Core.Result<Id> => {
     const id = new Id(value);
 
     const { success } = id.isValid();
     if (!success) {
-      return Core.Result.failure(new Error(`Invalid ${displayName}, id: ${value}`));
+      return Core.Result.failure(
+        new Error(`Invalid ${displayName}, id: ${value}`)
+      );
     }
 
     return Core.Result.success(id);
