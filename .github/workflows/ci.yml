@@ -6,6 +6,11 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    env:
+      # Remote Caching 機能を利用するための環境変数
+      # @see https://turbo.build/repo/docs/ci/github-actions
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
     steps:
       - uses: actions/checkout@v2
 
