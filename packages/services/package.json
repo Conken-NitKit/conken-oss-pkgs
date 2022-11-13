@@ -20,6 +20,7 @@
     "prepublishOnly": "npm run build",
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
     "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
+    "test": "jest --passWithNoTests",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -27,6 +28,11 @@
   },
   "devDependencies": {
     "@conken-oss-pkgs/eslint-config": "*",
-    "@conken-oss-pkgs/tsconfig": "*"
+    "@conken-oss-pkgs/tsconfig": "*",
+    "@types/jest": "^29.2.2",
+    "jest": "^29.3.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.8.4"
   }
 }
