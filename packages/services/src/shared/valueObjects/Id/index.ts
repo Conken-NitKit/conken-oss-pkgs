@@ -6,6 +6,10 @@ const idSchema = z.string().uuid();
 export type IdValue = z.infer<typeof idSchema>;
 
 export class Id extends Core.ValueObject<IdValue> {
+/**
+ * バリデーションルール
+ * @see https://github.com/validatorjs/validator.js/blob/master/src/lib/isUUID.js#L9
+ */
   validator = (value: IdValue) => {
     return idSchema.safeParse(value);
   };
