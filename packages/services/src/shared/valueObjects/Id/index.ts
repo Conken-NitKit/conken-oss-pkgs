@@ -9,6 +9,10 @@ export class Id extends Core.ValueObject<IdValue> {
   validator = (value: IdValue) => {
     return idSchema.safeParse(value);
   };
+  constructor(value: IdValue) {
+    super(value);
+    Object.freeze(this);
+  }
 }
 
 export namespace Id {

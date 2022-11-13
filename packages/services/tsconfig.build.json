@@ -6,4 +6,10 @@
     "declarationDir": "./lib/typescript",
     "outDir": "./lib",
   },
+  "exclude": [
+    "lib",
+    "node_modules",
+    "**/spec.js", 
+    "**/spec.ts",
+  ],
 }
