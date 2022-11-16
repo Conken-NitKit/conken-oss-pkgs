@@ -20,7 +20,7 @@
     "prepublishOnly": "npm run build",
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
     "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --coverage",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

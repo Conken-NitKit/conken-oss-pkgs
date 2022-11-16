@@ -32,7 +32,7 @@ export namespace Id {
   ): Core.Result<Id> => {
     const id = new Id(value);
 
-    const { success } = id.isValid();
+    const { success } = id.isValid;
     if (!success) {
       return Core.Result.failure(
         new Error(`Invalid ${displayName}, id: ${value}`)
