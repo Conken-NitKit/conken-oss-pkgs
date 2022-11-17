@@ -3,7 +3,7 @@ import { Core } from "~/core";
 
 const StatusSchema = z.enum(["todo", "doing", "done"]);
 
-export type StatusValue = z.infer<typeof StatusSchema>;
+type StatusValue = z.infer<typeof StatusSchema>;
 
 export class Status extends Core.ValueObject<StatusValue> {
   validator = (value: StatusValue) => {
@@ -16,14 +16,16 @@ export class Status extends Core.ValueObject<StatusValue> {
 }
 
 export namespace Status {
+  export const schema = StatusSchema;
+  export type Value = StatusValue;
+
   export const create = (
     value: StatusValue,
-    displayName: string
+    displayName = "ToDo.Task.Status"
   ): Core.Result<Status> => {
     const status = new Status(value);
 
-    const { success } = status.isValid;
-    if (!success) {
+    if (!status.isValid) {
       return Core.Result.failure(
         new Error(`Invalid ${displayName}, status: ${value}`)
       );

@@ -3,7 +3,7 @@ import { Core } from "~/core";
 
 const DescriptionSchema = z.string();
 
-export type DescriptionValue = z.infer<typeof DescriptionSchema>;
+type DescriptionValue = z.infer<typeof DescriptionSchema>;
 
 export class Description extends Core.ValueObject<DescriptionValue> {
   validator = (value: DescriptionValue) => {
@@ -16,14 +16,16 @@ export class Description extends Core.ValueObject<DescriptionValue> {
 }
 
 export namespace Description {
+  export const schema = DescriptionSchema;
+  export type Value = DescriptionValue;
+
   export const create = (
     value: DescriptionValue,
-    displayName: string
+    displayName = "ToDo.Task.Description"
   ): Core.Result<Description> => {
     const description = new Description(value);
 
-    const { success } = description.isValid;
-    if (!success) {
+    if (!description.isValid) {
       return Core.Result.failure(
         new Error(`Invalid ${displayName}, Description: ${value}`)
       );

@@ -1,16 +1,20 @@
+import { z } from "zod";
 import { Description } from "./valueObject/Description";
 import { Status } from "./valueObject/Status";
 import { Title } from "./valueObject/Title";
+import { Core } from "~/core";
 import { Shared } from "~/shared";
 
-export type Field = {
-  id: Shared.ValueObjects.Id;
-  title: Title;
-  description?: Description;
-  assigneeId?: Shared.ValueObjects.Id;
-  createdBy: Shared.ValueObjects.Id;
-  status: Status;
-};
+const FieldSchema = z.object({
+  id: Shared.ValueObjects.Id.schema,
+  title: Title.schema,
+  description: Description.schema.optional(),
+  status: Status.schema,
+  assigneeId: Shared.ValueObjects.Id.schema.optional(),
+  createdBy: Shared.ValueObjects.Id.schema,
+});
+
+export type Field = z.infer<typeof FieldSchema>;
 
 export type Props = Pick<
   Field,
@@ -39,6 +43,10 @@ export class Task {
     this.status = props.status;
   }
 
+  get isValid(): boolean {
+    return FieldSchema.safeParse(this.currentFields).success;
+  }
+
   private get currentFields(): Props {
     return {
       id: this.id,
@@ -50,16 +58,35 @@ export class Task {
     };
   }
 
-  update(fields: Partial<UpdatableField>): Task {
-    return new Task({
+  update(fields: Partial<UpdatableField>): Core.Result<Task> {
+    const updated = new Task({
       ...this.currentFields,
       ...fields,
     });
+
+    if (!updated.isValid) {
+      return Core.Result.failure(
+        new Error(`Invalid Task, props: ${JSON.stringify(fields)}`)
+      );
+    }
+
+    return Core.Result.success(updated);
   }
 }
 
 export namespace Task {
-  export const create = (props: Props): Task => {
-    return new Task(props);
+  export const create = (
+    props: Props,
+    displayName = "Todo.Task"
+  ): Core.Result<Task> => {
+    const task = new Task(props);
+
+    if (!task.isValid) {
+      return Core.Result.failure(
+        new Error(`Invalid ${displayName}, props: ${JSON.stringify(props)}`)
+      );
+    }
+
+    return Core.Result.success(task);
   };
 }

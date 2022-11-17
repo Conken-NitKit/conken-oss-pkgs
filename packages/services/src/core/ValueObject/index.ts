@@ -6,6 +6,6 @@ export abstract class ValueObject<T> {
   constructor(readonly value: T) {}
 
   get isValid() {
-    return this.validator(this.value);
+    return this.validator(this.value).success;
   }
 }

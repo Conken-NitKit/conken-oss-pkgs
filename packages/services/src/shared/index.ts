@@ -1,8 +1,5 @@
 /* istanbul ignore file */
-import {
-  Id as SharedId,
-  IdValue as SharedIdValue,
-} from "~/shared/valueObjects/Id";
+import { Id as SharedId } from "~/shared/valueObjects/Id";
 
 export namespace Shared {
   /**
@@ -11,6 +8,5 @@ export namespace Shared {
   export namespace ValueObjects {
     export type Id = SharedId;
     export const Id = SharedId;
-    export type IdValue = SharedIdValue;
   }
 }
