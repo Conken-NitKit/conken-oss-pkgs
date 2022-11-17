@@ -22,6 +22,11 @@ module.exports = {
       }
     ],
     [
+      "json", {
+        "file": "report.json",
+      }
+    ],
+    [
       "text"
     ]
   ]

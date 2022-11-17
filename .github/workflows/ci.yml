@@ -21,12 +21,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run Test
+        run: npm run test:ci
+
       # @see https://blog.chick-p.work/blog/github-actions-job-summary
-      - name: Run test:ci
-        run: |
-          npm run test:ci
-          echo '# Coverage Of Services :rocket:' >> $GITHUB_STEP_SUMMARY
-          cat packages/services/coverage/report.txt | sed '1d' | sed '$d' >> $GITHUB_STEP_SUMMARY
+      - uses: artiomtr/jest-coverage-report-action@v1.3
+        id: services-coverage
+        with:
+          test-script: npm run test:ci -w @conken-oss-pkgs/services
+          coverage-file: ./packages/services/coverage/report.json
+          output: report-markdown
+          skip-step: install
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          # pass output from the previous step by id.
+          message: ${{ steps.services-coverage.outputs.report }}
 
       - name: Check lint
         run: npm run lint
