@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { Result as CoreResult } from "~/core/Result";
 import { ValueObject as CoreValueObject } from "~/core/ValueObject";
 

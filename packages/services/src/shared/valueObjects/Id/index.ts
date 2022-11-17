@@ -3,7 +3,7 @@ import { Core } from "~/core";
 
 const idSchema = z.string().uuid();
 
-export type IdValue = z.infer<typeof idSchema>;
+type IdValue = z.infer<typeof idSchema>;
 
 export class Id extends Core.ValueObject<IdValue> {
   /**
@@ -20,6 +20,9 @@ export class Id extends Core.ValueObject<IdValue> {
 }
 
 export namespace Id {
+  export const schema = idSchema;
+  export type Value = IdValue;
+
   /**
    * Id のインスタンスの生成結果を作成する便利関数
    * @param value Id の値
@@ -28,12 +31,11 @@ export namespace Id {
    */
   export const create = (
     value: IdValue,
-    displayName: string
+    displayName = "Shared.ValueObject.Id"
   ): Core.Result<Id> => {
     const id = new Id(value);
 
-    const { success } = id.isValid();
-    if (!success) {
+    if (!id.isValid) {
       return Core.Result.failure(
         new Error(`Invalid ${displayName}, id: ${value}`)
       );
