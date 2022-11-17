@@ -21,16 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Test
+      - name: Run test
         run: npm run test:ci
-
-      - name: Create Coverage Report
-        uses: marocchino/sticky-pull-request-comment@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          # pass output from the previous step by id.
-          path: packages/services/coverage/report.txt
 
       - name: Check lint
         run: npm run lint
@@ -40,4 +32,3 @@ jobs:
 
       - name: Run typecheck
         run: npm run typecheck
-
