@@ -1,5 +1,14 @@
 {
   "name": "@conken-oss-pkgs/tsconfig",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "common",
+    "library",
+    "library-react",
+    "library-react-emotion"
+  ]
 }
