@@ -26,6 +26,8 @@ jobs:
 
       - name: Create Coverage Report
         uses: marocchino/sticky-pull-request-comment@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # pass output from the previous step by id.
           path: packages/services/coverage/report.txt
