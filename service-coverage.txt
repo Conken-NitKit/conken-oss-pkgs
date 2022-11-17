@@ -1,0 +1,16 @@
+# Coverage Of Services :rocket:
+File                                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------------------------------|---------|----------|---------|---------|-------------------
+All files                                  |   98.61 |    77.77 |     100 |   98.48 |                   
+ core/Result                               |     100 |      100 |     100 |     100 |                   
+  index.ts                                 |     100 |      100 |     100 |     100 |                   
+ core/ValueObject                          |     100 |      100 |     100 |     100 |                   
+  index.ts                                 |     100 |      100 |     100 |     100 |                   
+ shared/valueObjects/Id                    |     100 |    66.66 |     100 |     100 |                   
+  index.ts                                 |     100 |    66.66 |     100 |     100 | 22-34             
+ subdomains/todo/entities/Task             |     100 |       80 |     100 |     100 |                   
+  core.ts                                  |     100 |       80 |     100 |     100 | 77                
+ subdomains/todo/entities/Task/valueObject |   96.49 |    72.22 |     100 |   96.07 |                   
+  Description.ts                           |   94.73 |    66.66 |     100 |   94.11 | 29                
+  Status.ts                                |   94.73 |    66.66 |     100 |   94.11 | 29                
+  Title.ts                                 |     100 |    83.33 |     100 |     100 | 18                
