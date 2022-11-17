@@ -69,7 +69,7 @@ class FailureResult<T, E extends Error> extends AbstractResult<T, E> {
   }
 
   protected _getWrapped(
-    _: (data: T) => Result<T, E>,
+    _success: (data: T) => Result<T, E>,
     failure: (error: E) => Result<T, E>
   ): Result<T, E> {
     return failure(this.error);
