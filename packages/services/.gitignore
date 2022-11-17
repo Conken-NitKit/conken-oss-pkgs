@@ -2,6 +2,3 @@ node_modules/
 
 # build
 lib/
-
-# coverage
-report.json
