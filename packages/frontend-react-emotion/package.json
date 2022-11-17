@@ -25,6 +25,7 @@
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
     "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
     "test": "cypress run --component",
+    "test:ci": "cypress run --component",
     "storybook": "start-storybook -p 9009",
     "typecheck": "tsc --noEmit",
     "build-storybook": "build-storybook",

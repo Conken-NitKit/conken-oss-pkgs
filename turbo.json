@@ -16,6 +16,9 @@
     "test": {
       "outputs": []
     },
+    "test:ci": {
+      "outputs": []
+    },
     "lint": {
       "outputs": []
     },

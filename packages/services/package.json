@@ -21,6 +21,7 @@
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
     "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
     "test": "jest --passWithNoTests --coverage",
+    "test:ci": "npm run test -- --coverage --silent --testLocationInResults --ci --json --outputFile=\"report.json\"",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
