@@ -1,4 +1,4 @@
-name: Publish "frontend-react-emotion" to npmjs 
+name: Publish "tsconfig" to npmjs 
 
 on:
   workflow_dispatch:
@@ -20,14 +20,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install Dependencies
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm ci
-
-      - name: Run build
-        run: npm run build
-
-      - name: Publish "frontend-react-emotion"
-        run: npm publish -w @conken-oss-pkgs/frontend-react-emotion
+      - name: Publish "tsconfig"
+        run: npm publish -w @conken-oss-pkgs/tsconfig
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

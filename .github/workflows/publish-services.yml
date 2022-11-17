@@ -1,4 +1,4 @@
-name: Publish "frontend-react-emotion" to npmjs 
+name: Publish "services" to npmjs 
 
 on:
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
       - name: Run build
         run: npm run build
 
-      - name: Publish "frontend-react-emotion"
-        run: npm publish -w @conken-oss-pkgs/frontend-react-emotion
+      - name: Publish "services"
+        run: npm publish -w @conken-oss-pkgs/services
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
