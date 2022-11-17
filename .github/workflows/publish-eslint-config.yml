@@ -1,4 +1,4 @@
-name: Publish "frontend-react-emotion" to npmjs 
+name: Publish "eslint-config" to npmjs 
 
 on:
   workflow_dispatch:
@@ -24,10 +24,7 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Run build
-        run: npm run build
-
-      - name: Publish "frontend-react-emotion"
-        run: npm publish -w @conken-oss-pkgs/frontend-react-emotion
+      - name: Publish "eslint-config"
+        run: npm publish -w @conken-oss-pkgs/eslint-config
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
