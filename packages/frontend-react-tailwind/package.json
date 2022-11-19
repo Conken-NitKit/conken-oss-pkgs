@@ -1,0 +1,19 @@
+{
+  "name": "@conken-oss-pkgs/frontend-react-tailwind",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Conken-NitKit/typescript-everything.git"
+  },
+  "author": "kubo-hide-kun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Conken-NitKit/typescript-everything/issues"
+  },
+  "homepage": "https://github.com/Conken-NitKit/typescript-everything#readme"
+}
