@@ -1,5 +1,5 @@
 {
-  "extends": "@conken-oss-pkgs/tsconfig/library-react-emotion",
+  "extends": "@unwheel-pkg/tsconfig/library-react-emotion",
   "compilerOptions": {
     "baseUrl": ".",
   },

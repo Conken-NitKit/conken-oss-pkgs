@@ -12,7 +12,7 @@ const extractDirectoryNames = (path, { ignoreHiddenFiles = true } = {}) => {
 };
 
 // Note: apps ディレクトリと packages ディレクトリの配下のディレクトリ名を取得
-// Note: この処理により、スコープを指定する際に @conken-oss-pkgs/ の部分を省略できる
+// Note: この処理により、スコープを指定する際に @unwheel-pkg/ の部分を省略できる
 const targetDirectories = [
   path.resolve(__dirname, "apps"),
   path.resolve(__dirname, "packages"),

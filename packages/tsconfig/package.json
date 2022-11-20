@@ -1,5 +1,5 @@
 {
-  "name": "@conken-oss-pkgs/tsconfig",
+  "name": "@unwheel-pkg/tsconfig",
   "version": "1.0.1",
   "publishConfig": {
     "access": "public"

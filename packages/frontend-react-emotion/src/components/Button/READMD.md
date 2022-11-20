@@ -14,7 +14,7 @@
 
 ```tsx
 import { useCallback } from "react";
-import { Button, ButtonStyle } from "@conken-oss-pkg/frontend-react-emotion";
+import { Button, ButtonStyle } from "@unwheel-pkg/frontend-react-emotion";
 
 const style: ButtonStyle.BASIC = {
   TEXT: "#fff",

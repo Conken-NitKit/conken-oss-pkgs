@@ -24,7 +24,7 @@ type CreateContextReturn<T> = [Provider<T>, () => T, Context<T>];
 
 /**
  * 名前つきの context とそれに対応する Provider を作成する関数です。
- * TODO: この関数は、conken-oss-pkgs/frontend-react に移動する予定です。
+ * TODO: この関数は、unwheel-pkg/frontend-react に移動する予定です。
  *
  * @param options context のオプションです。
  */

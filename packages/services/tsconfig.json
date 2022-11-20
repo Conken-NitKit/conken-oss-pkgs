@@ -1,5 +1,5 @@
 {
-  "extends": "@conken-oss-pkgs/tsconfig/library",
+  "extends": "@unwheel-pkg/tsconfig/library",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

@@ -1,4 +1,4 @@
-<h1 align="center">@conken-oss-pkg/frontend-react-emotion</h1>
+<h1 align="center">@unwheel-pkg/frontend-react-emotion</h1>
 
 ## リンク
 
@@ -9,13 +9,13 @@
 ### npm:
 
 ```sh
-npm install @conken-oss-pkg/frontend-react-emotion
+npm install @unwheel-pkg/frontend-react-emotion
 ```
 
 ### yarn:
 
 ```sh
-yarn add @conken-oss-pkg/frontend-react-emotion
+yarn add @unwheel-pkg/frontend-react-emotion
 ```
 
 ### 利用方法
@@ -48,7 +48,7 @@ export const MyComponent = (): JSX.Element => {
 
 ```tsx
 import { useCallback } from "react";
-import { Button, ButtonStyle } from "@conken-oss-pkg/frontend-react-emotion";
+import { Button, ButtonStyle } from "@unwheel-pkg/frontend-react-emotion";
 
 const style: ButtonStyle.BASIC = {
   TEXT: "#fff",

@@ -25,6 +25,6 @@ jobs:
         run: npm ci
 
       - name: Publish "eslint-config"
-        run: npm publish -w @conken-oss-pkgs/eslint-config
+        run: npm publish -w @unwheel-pkg/eslint-config
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

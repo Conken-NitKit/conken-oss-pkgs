@@ -81,13 +81,13 @@ npm ci
 このコマンドを実行すると「コンポーネント名」の入力を要求されます。
 
 ```sh
-npm run new:fc -w @conken-oss-pkg/frontend-react-emotion
+npm run new:fc -w @unwheel-pkg/frontend-react-emotion
 ```
 
 ```sh
-$ npm run new:fc -w @conken-oss-pkg/frontend-react-emotion
+$ npm run new:fc -w @unwheel-pkg/frontend-react-emotion
 
-> @conken-oss-pkg/frontend-react-emotion@0.0.0 new:fc
+> @unwheel-pkg/frontend-react-emotion@0.0.0 new:fc
 > hygen new fc
 
 ? What is the component name? ›
@@ -115,7 +115,7 @@ Loaded templates: hygen
 StoryBook の起動には以下のコマン実行したのち、[http://localhost:9009/](http://localhost:9009/) にアクセスすることで起動可能です。
 
 ```sh
-npm run storybook -w @conken-oss-pkg/frontend-react-emotion
+npm run storybook -w @unwheel-pkg/frontend-react-emotion
 ```
 
 ### StoryBook 用のファイルの記載方法
@@ -156,8 +156,8 @@ Unit テストについて: [ユニットテストってどんなもの？](http
 # 全てのパッケージの自動テストを実行
 npm run test
 
-# @conken-oss-pkg/frontend-react-emotion に絞って、自動テストを実行
-npm run test -w @conken-oss-pkg/frontend-react-emotion
+# @unwheel-pkg/frontend-react-emotion に絞って、自動テストを実行
+npm run test -w @unwheel-pkg/frontend-react-emotion
 ```
 
 ### テストコードの書き方
@@ -223,8 +223,8 @@ it("BasicButton | クリックイベントが発火されていることを確�
 
 ## ライブラリの導入
 
-このワークスペースに新しくライブラリを導入する場合はワークスペースとして `@conken-oss-pkg/frontend-react-emotion` を指定してください。
+このワークスペースに新しくライブラリを導入する場合はワークスペースとして `@unwheel-pkg/frontend-react-emotion` を指定してください。
 
 ```sh
-npm i sample-library -w @conken-oss-pkg/frontend-react-emotion
+npm i sample-library -w @unwheel-pkg/frontend-react-emotion
 ```

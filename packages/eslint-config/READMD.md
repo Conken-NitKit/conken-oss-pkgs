@@ -1,4 +1,4 @@
-<h1 align="center">@conken-oss-pkg/eslint-config</h1>
+<h1 align="center">@unwheel-pkg/eslint-config</h1>
 
 ESLint ルールセットです。将来的には publish 予定です。
 

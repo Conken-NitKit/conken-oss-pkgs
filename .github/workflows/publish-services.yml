@@ -28,6 +28,6 @@ jobs:
         run: npm run build
 
       - name: Publish "services"
-        run: npm publish -w @conken-oss-pkgs/services
+        run: npm publish -w @unwheel-pkg/services
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

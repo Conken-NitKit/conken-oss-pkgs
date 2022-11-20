@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@conken-oss-pkgs/eslint-config/presets/typescript'],
+  extends: ['@unwheel-pkg/eslint-config/presets/typescript'],
 }
