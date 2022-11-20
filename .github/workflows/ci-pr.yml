@@ -20,7 +20,7 @@ jobs:
         run: npm ci
 
       - name: Run Test
-        run: npm run test:ci -w @conken-oss-pkgs/services
+        run: npm run test:ci -w @unwheel-pkg/services
 
       - name: Generate Service Coverage Report
         run: |

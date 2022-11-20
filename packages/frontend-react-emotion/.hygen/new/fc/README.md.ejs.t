@@ -15,7 +15,7 @@ to: <%= abs_path %>/README.md
 
 ```tsx
 import { useCallback } from "react";
-import { <%= pascal_case %>, <%= pascal_case %>Style } from "@conken-oss-pkg/frontend-react-emotion";
+import { <%= pascal_case %>, <%= pascal_case %>Style } from "@unwheel-pkg/frontend-react-emotion";
 
 const style: <%= pascal_case %>Style.BASIC = {
   TEXT: "#fff",

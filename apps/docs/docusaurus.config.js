@@ -37,7 +37,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/Conken-NitKit/conken-oss-pkgs/tree/main/apps/docusaurus-for-pkgs",
+            "https://github.com/Conken-NitKit/unwheel-pkgs/tree/main/apps/docusaurus-for-pkgs",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -50,7 +50,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "@conken-pkg",
+        title: "@unwheel-pkg",
         logo: {
           alt: "コンポタ",
           src: "img/logo192.png",
@@ -74,7 +74,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/Conken-NitKit/conken-oss-pkgs/tree/main/apps/docusaurus-for-pkgs",
+            href: "https://github.com/Conken-NitKit/unwheel-pkgs/tree/main/apps/docusaurus-for-pkgs",
             label: "GitHub Repo",
             position: "right",
           },
@@ -92,7 +92,7 @@ const config = {
               },
               {
                 label: "GitHub Repo",
-                href: "https://github.com/Conken-NitKit/conken-oss-pkgs/tree/main/apps/docusaurus-for-pkgs",
+                href: "https://github.com/Conken-NitKit/unwheel-pkgs/tree/main/apps/docusaurus-for-pkgs",
               },
             ],
           },

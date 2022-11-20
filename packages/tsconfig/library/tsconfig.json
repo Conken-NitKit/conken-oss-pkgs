@@ -1,5 +1,5 @@
 {
-  "extends": "@conken-oss-pkgs/tsconfig/common",
+  "extends": "@unwheel-pkg/tsconfig/common",
   "display": "TS Library",
   "compilerOptions": {
     "lib": ["es6", "dom"],

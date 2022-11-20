@@ -1,5 +1,5 @@
 {
-  "name": "@conken-oss-pkgs/frontend-react-tailwind",
+  "name": "@unwheel-pkg/frontend-react-tailwind",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Conken-NitKit/typescript-everything.git"
+    "url": "git+https://github.com/Conken-NitKit/unwheel-pkgs.git"
   },
   "author": "kubo-hide-kun",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Conken-NitKit/typescript-everything/issues"
+    "url": "https://github.com/Conken-NitKit/unwheel-pkgs/issues"
   },
-  "homepage": "https://github.com/Conken-NitKit/typescript-everything#readme"
+  "homepage": "https://github.com/Conken-NitKit/unwheel-pkgs#readme"
 }

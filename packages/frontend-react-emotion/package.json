@@ -1,9 +1,9 @@
 {
-  "name": "@conken-oss-pkgs/frontend-react-emotion",
-  "version": "0.0.0",
+  "name": "@unwheel-pkg/frontend-react-emotion",
+  "version": "1.0.0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Conken-NitKit/conken-oss-pkgs/issues"
+    "url": "https://github.com/Conken-NitKit/unwheel-pkgs/issues"
   },
   "keywords": [
     "react",
@@ -42,8 +42,8 @@
     "@babel/preset-env": "^7.19.4",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
-    "@conken-oss-pkgs/eslint-config": "*",
-    "@conken-oss-pkgs/tsconfig": "*",
+    "@unwheel-pkg/eslint-config": "*",
+    "@unwheel-pkg/tsconfig": "*",
     "@cypress/react": "^6.2.0",
     "@cypress/vite-dev-server": "^3.3.1",
     "@emotion/babel-preset-css-prop": "^11.10.0",

@@ -1,4 +1,4 @@
-<h1 align="center">@conken-oss-pkg/tsconfig</h1>
+<h1 align="center">@unwheel-pkg/tsconfig</h1>
 
 tsconfig ルールセットです。将来的には publish 予定です。
 

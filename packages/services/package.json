@@ -1,9 +1,9 @@
 {
-  "name": "@conken-oss-pkgs/services",
+  "name": "@unwheel-pkg/services",
   "version": "0.0.0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Conken-NitKit/conken-oss-pkgs/issues"
+    "url": "https://github.com/Conken-NitKit/unwheel-pkgs/issues"
   },
   "files": [
     "lib"
@@ -28,8 +28,8 @@
     "zod": "^3.19.1"
   },
   "devDependencies": {
-    "@conken-oss-pkgs/eslint-config": "*",
-    "@conken-oss-pkgs/tsconfig": "*",
+    "@unwheel-pkg/eslint-config": "*",
+    "@unwheel-pkg/tsconfig": "*",
     "@types/jest": "^29.2.2",
     "jest": "^29.3.1",
     "rimraf": "^3.0.2",
