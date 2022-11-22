@@ -8,6 +8,7 @@ export type Task = TaskCore;
 
 export namespace Task {
   export const create = TaskCore.create;
+  export const forceCreate = TaskCore.forceCreate;
   export type Description = TaskDescription;
   export const Description = TaskDescription;
   export type Status = TaskStatus;
