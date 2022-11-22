@@ -58,11 +58,23 @@ export class Task {
     };
   }
 
-  update(fields: Partial<UpdatableField>): Core.Result<Task> {
+  update(fields: Partial<UpdatableField>): Core.Result<Task>;
+  update(fields: Partial<UpdatableField>, { unwrap }: { unwrap: true }): Task;
+  update(
+    fields: Partial<UpdatableField>,
+    { unwrap }: { unwrap: boolean } = { unwrap: false }
+  ): Task | Core.Result<Task> {
     const updated = new Task({
       ...this.currentFields,
       ...fields,
     });
+
+    if (unwrap) {
+      if (!updated.isValid) {
+        throw new Error(`Invalid Task, props: ${JSON.stringify(fields)}`);
+      }
+      return updated;
+    }
 
     if (!updated.isValid) {
       return Core.Result.failure(
@@ -88,5 +100,20 @@ export namespace Task {
     }
 
     return Core.Result.success(task);
+  };
+
+  export const forceCreate = (
+    props: Props,
+    displayName = "Todo.Task"
+  ): Task => {
+    const task = new Task(props);
+
+    if (!task.isValid) {
+      throw new Error(
+        `Invalid ${displayName}, props: ${JSON.stringify(props)}`
+      );
+    }
+
+    return task;
   };
 }
