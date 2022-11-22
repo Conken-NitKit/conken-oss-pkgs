@@ -16,22 +16,27 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
 
-      # キャッシュを利用して、npm ci の実行時間を短縮
-      # @see https://dev.classmethod.jp/articles/cicd-npm-ci-cache/
-      - name: Cache npm dir
-        uses: actions/cache@v2
+      # node_modules がキャッシュされていれば展開する
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Install Dependencies
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+      # node_modules がキャッシュされてなければ npm ci
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: npm install
         run: npm ci
 
       - name: Run build
