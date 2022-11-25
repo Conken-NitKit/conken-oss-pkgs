@@ -1,0 +1,9 @@
+{
+  "extends": "@unwheel-pkg/tsconfig/library",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+}
