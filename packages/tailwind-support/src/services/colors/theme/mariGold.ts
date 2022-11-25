@@ -1,7 +1,8 @@
 import { Pallet } from "~/constants/pallet";
 import { createColorsFromScheme } from "~/services/colors/createColorsFromScheme";
 
-export const createMaryGoldColors = ({ prefix = "" } = {}) =>
+/* istanbul ignore file */
+export const createMariGoldColors = ({ prefix = "" } = {}) =>
   createColorsFromScheme(
     {
       text: {
@@ -81,5 +82,3 @@ export const createMaryGoldColors = ({ prefix = "" } = {}) =>
       prefix,
     }
   );
-
-  console.log(createMaryGoldColors());

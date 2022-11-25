@@ -1,0 +1,153 @@
+import { createMariGoldColors } from "./theme/mariGold";
+
+/**
+ * マリーゴールドのカラーテーマのみのテストを行っています
+ */
+describe("createmarigoldColors", () => {
+  it("マリーゴールドのテーマが生成できるか (prefixなし)", () => {
+    const colors = createMariGoldColors();
+    expect(colors).toEqual({
+      backgroundColor: {
+        primary: "#fff",
+        secondary: "#e7e5e4",
+        tertiary: "#fed7aa",
+        "accent-primary": "#ea580c",
+        "accent-secondary": "#f59e0b",
+        "accent-tertiary": "#2dd4bf",
+        success: "#65a30d",
+        warning: "#facc15",
+        disable: "#d6d3d1",
+        caution: "#b91c1c",
+        overlay: "#44403c",
+        "primary-inverted": "#1c1917",
+        "secondary-inverted": "#292524",
+        "tertiary-inverted": "#44403c",
+        "accent-primary-inverted": "#78350f",
+        "accent-secondary-inverted": "#b45309",
+        "accent-tertiary-inverted": "#fff",
+        "success-inverted": "#65a30d",
+        "warning-inverted": "#facc15",
+        "disable-inverted": "#d6d3d1",
+        "caution-inverted": "#b91c1c",
+        "overlay-inverted": "#fff",
+      },
+      backgroundImage: {
+        "accent-gradient-primary":
+          "linear-gradient(180deg, #fb923c 0%, #ea580c 100%)",
+        "accent-gradient-secondary":
+          "linear-gradient(180deg, #fca5a5 0%, #f59e0b 100%)",
+      },
+      borderColor: {
+        "high-emphasis": "#0f172a",
+        "medium-emphasis": "#292524",
+        "low-emphasis": "#a8a29e",
+        success: "#65a30d",
+        warning: "#facc15",
+        disable: "#d6d3d1",
+        caution: "#b91c1c",
+        "high-emphasis-inverted": "#fff",
+        "medium-emphasis-inverted": "#d6d3d1",
+        "low-emphasis-inverted": "#78716c",
+        "success-inverted": "#ecfccb",
+        "warning-inverted": "#fef9c3",
+        "disable-inverted": "#78716c",
+        "caution-inverted": "#dc2626",
+      },
+      textColor: {
+        "high-emphasis": "#0f172a",
+        "medium-emphasis": "#292524",
+        "low-emphasis": "#a8a29e",
+        "accent-primary": "#ea580c",
+        "accent-secondary": "#fda4af",
+        "accent-tertiary": "#2dd4bf",
+        success: "#65a30d",
+        warning: "#facc15",
+        disable: "#d6d3d1",
+        caution: "#b91c1c",
+        "high-emphasis-inverted": "#fff",
+        "medium-emphasis-inverted": "#d6d3d1",
+        "low-emphasis-inverted": "#78716c",
+        "accent-primary-inverted": "#78350f",
+        "accent-secondary-inverted": "#b45309",
+        "accent-tertiary-inverted": "#fff",
+        "success-inverted": "#ecfccb",
+        "warning-inverted": "#fef9c3",
+        "disable-inverted": "#78716c",
+        "caution-inverted": "#dc2626",
+      },
+    });
+  });
+  it("マリーゴールドのテーマが生成できるか (prefixあり)", () => {
+    const colors = createMariGoldColors({ prefix: "marigold" });
+    expect(colors).toEqual({
+      backgroundColor: {
+        "marigold-primary": "#fff",
+        "marigold-secondary": "#e7e5e4",
+        "marigold-tertiary": "#fed7aa",
+        "marigold-accent-primary": "#ea580c",
+        "marigold-accent-secondary": "#f59e0b",
+        "marigold-accent-tertiary": "#2dd4bf",
+        "marigold-success": "#65a30d",
+        "marigold-warning": "#facc15",
+        "marigold-disable": "#d6d3d1",
+        "marigold-caution": "#b91c1c",
+        "marigold-overlay": "#44403c",
+        "marigold-primary-inverted": "#1c1917",
+        "marigold-secondary-inverted": "#292524",
+        "marigold-tertiary-inverted": "#44403c",
+        "marigold-accent-primary-inverted": "#78350f",
+        "marigold-accent-secondary-inverted": "#b45309",
+        "marigold-accent-tertiary-inverted": "#fff",
+        "marigold-success-inverted": "#65a30d",
+        "marigold-warning-inverted": "#facc15",
+        "marigold-disable-inverted": "#d6d3d1",
+        "marigold-caution-inverted": "#b91c1c",
+        "marigold-overlay-inverted": "#fff",
+      },
+      backgroundImage: {
+        "marigold-accent-gradient-primary":
+          "linear-gradient(180deg, #fb923c 0%, #ea580c 100%)",
+        "marigold-accent-gradient-secondary":
+          "linear-gradient(180deg, #fca5a5 0%, #f59e0b 100%)",
+      },
+      borderColor: {
+        "marigold-high-emphasis": "#0f172a",
+        "marigold-medium-emphasis": "#292524",
+        "marigold-low-emphasis": "#a8a29e",
+        "marigold-success": "#65a30d",
+        "marigold-warning": "#facc15",
+        "marigold-disable": "#d6d3d1",
+        "marigold-caution": "#b91c1c",
+        "marigold-high-emphasis-inverted": "#fff",
+        "marigold-medium-emphasis-inverted": "#d6d3d1",
+        "marigold-low-emphasis-inverted": "#78716c",
+        "marigold-success-inverted": "#ecfccb",
+        "marigold-warning-inverted": "#fef9c3",
+        "marigold-disable-inverted": "#78716c",
+        "marigold-caution-inverted": "#dc2626",
+      },
+      textColor: {
+        "marigold-high-emphasis": "#0f172a",
+        "marigold-medium-emphasis": "#292524",
+        "marigold-low-emphasis": "#a8a29e",
+        "marigold-accent-primary": "#ea580c",
+        "marigold-accent-secondary": "#fda4af",
+        "marigold-accent-tertiary": "#2dd4bf",
+        "marigold-success": "#65a30d",
+        "marigold-warning": "#facc15",
+        "marigold-disable": "#d6d3d1",
+        "marigold-caution": "#b91c1c",
+        "high-emphasis-inverted": "#fff",
+        "medium-emphasis-inverted": "#d6d3d1",
+        "low-emphasis-inverted": "#78716c",
+        "accent-primary-inverted": "#78350f",
+        "accent-secondary-inverted": "#b45309",
+        "accent-tertiary-inverted": "#fff",
+        "success-inverted": "#ecfccb",
+        "warning-inverted": "#fef9c3",
+        "disable-inverted": "#78716c",
+        "caution-inverted": "#dc2626",
+      },
+    });
+  });
+});
