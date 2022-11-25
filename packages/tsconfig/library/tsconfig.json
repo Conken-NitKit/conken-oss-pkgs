@@ -2,7 +2,7 @@
   "extends": "@unwheel-pkg/tsconfig/common",
   "display": "TS Library",
   "compilerOptions": {
-    "lib": ["es6", "dom"],
+    "lib": ["ESNext", "dom"],
     "target": "es5",
     "skipLibCheck": true,
     "resolveJsonModule": true,

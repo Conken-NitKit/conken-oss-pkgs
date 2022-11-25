@@ -40,13 +40,17 @@ jobs:
 
       - name: Generate Service Coverage Report
         run: |
-          echo '# Coverage Of Services :rocket:' >> service-coverage.txt
-          echo 'coverage とは: https://overworker.hatenablog.jp/entry/2021/03/09/011110' >> service-coverage.txt
-          echo 'コメント生成方法: https://github.com/marocchino/sticky-pull-request-comment' >> service-coverage.txt
-          cat packages/services/coverage/report.txt | sed '1d' | sed '$d' >> service-coverage.txt
+          echo '# Coverage' >> coverage.txt
+          echo 'coverage とは: https://overworker.hatenablog.jp/entry/2021/03/09/011110' >> coverage.txt
+          echo 'コメント生成方法: https://github.com/marocchino/sticky-pull-request-comment' >> coverage.txt
+          echo '## Coverage Of Services :rocket:' >> coverage.txt
+          cat packages/services/coverage/report.txt | sed '1d' | sed '$d' >> coverage.txt
+          echo '' >> coverage.txt
+          echo '## Coverage Of Services :rocket:' >> coverage.txt
+          cat packages/tailwind-support/coverage/report.txt | sed '1d' | sed '$d' >> coverage.txt
 
       - name: Comment Service Coverage Report
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           # pass output from the previous step by id.
-          path: service-coverage.txt
+          path: coverage.txt

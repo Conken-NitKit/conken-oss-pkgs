@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "./lib/typescript",
+    "outDir": "./lib",
+  },
+  "exclude": [
+    "lib",
+    "node_modules",
+    "**/spec.js", 
+    "**/spec.ts",
+  ],
+}
