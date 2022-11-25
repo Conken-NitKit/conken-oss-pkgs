@@ -4,11 +4,11 @@ type TextColorScheme = {
   low_emphasis: string;
   accent_primary: string;
   accent_secondary: string;
+  accent_tertiary: string;
   success: string;
   warning: string;
   disable: string;
   caution: string;
-  hint: string;
 };
 
 type BackgroundColorScheme = {
@@ -17,12 +17,12 @@ type BackgroundColorScheme = {
   tertiary: string;
   accent_primary: string;
   accent_secondary: string;
+  accent_tertiary: string;
   success: string;
   warning: string;
   disable: string;
   caution: string;
   overlay: string;
-  hint: string;
 };
 
 /**
@@ -39,9 +39,8 @@ type BorderColorScheme = {
   low_emphasis: string;
   success: string;
   warning: string;
-  DISABLE: string;
+  disable: string;
   caution: string;
-  hint: string;
 };
 
 export type ColorScheme = {
