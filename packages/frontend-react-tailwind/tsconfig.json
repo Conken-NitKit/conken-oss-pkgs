@@ -1,0 +1,6 @@
+{
+  "extends": "@unwheel-pkg/tsconfig/library-react-emotion",
+  "compilerOptions": {
+    "baseUrl": ".",
+  },
+}

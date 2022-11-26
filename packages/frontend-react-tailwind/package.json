@@ -1,19 +1,60 @@
 {
   "name": "@unwheel-pkg/frontend-react-tailwind",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Conken-NitKit/unwheel-pkgs.git"
-  },
-  "author": "kubo-hide-kun",
-  "license": "ISC",
+  "version": "1.0.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Conken-NitKit/unwheel-pkgs/issues"
   },
-  "homepage": "https://github.com/Conken-NitKit/unwheel-pkgs#readme"
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "source": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "rimraf ./lib && tsc --project tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix",
+    "storybook": "start-storybook -p 9010",
+    "typecheck": "tsc --noEmit",
+    "new:fc": "hygen new fc"
+  },
+  "peerDependencies": {
+    "@types/react": "^17.0.0 || ^18.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@types/node": "^18.11.2",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@unwheel-pkg/eslint-config": "*",
+    "@unwheel-pkg/tailwind-support": "*",
+    "@unwheel-pkg/tsconfig": "*",
+    "csstype": "^3.1.1",
+    "hygen": "^6.2.11",
+    "postcss": "^8.4.19",
+    "postcss-import": "^14.0.1",
+    "postcss-preset-env": "^7.8.3",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "3.2.4",
+    "typescript": "<4.8.0"
+  }
 }

@@ -1,0 +1,26 @@
+{
+  "extends": "@unwheel-pkg/tsconfig/library-react-emotion",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "./lib/typescript",
+    "outDir": "./lib",
+  },
+  "exclude": [
+    "cypress",
+    "lib",
+    "node_modules", 
+    "storybook-static", 
+    "cypress.config.ts",
+    "vite.config.ts",
+    "**/*.cy.js", 
+    "**/*.cy.ts", 
+    "**/*.cy.jsx", 
+    "**/*.cy.tsx", 
+    "**/*.stories.js",
+    "**/*.stories.ts",
+    "**/*.stories.jsx",
+    "**/*.stories.tsx",
+    "**/*.stories.mdx",
+  ],
+}
