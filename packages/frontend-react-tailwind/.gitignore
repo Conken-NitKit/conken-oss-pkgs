@@ -1,0 +1,12 @@
+node_modules/
+
+# build
+lib/
+
+# cypress
+cypress/screenshots/
+cypress/videos/
+
+# storybook
+storybook-develop/
+storybook-static/
