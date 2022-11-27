@@ -1,9 +1,8 @@
+const path = require("path");
+
 module.exports = {
   typescript: { reactDocgen: false },
-  stories: [
-    "../**/*.stories.mdx",
-    "../**/*.stories.@(js|jsx|ts|tsx)",
-  ],
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-essentials",
     {
@@ -15,6 +14,7 @@ module.exports = {
       },
     },
   ],
+  staticDir: [path.resolve(__dirname, "../public")],
   core: {
     builder: "webpack4",
   },

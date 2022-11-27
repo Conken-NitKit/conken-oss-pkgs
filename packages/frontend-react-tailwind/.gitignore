@@ -7,5 +7,6 @@ lib/
 cypress/screenshots/
 cypress/videos/
 
-# storybook-build
+# storybook
+storybook-develop/
 storybook-static/

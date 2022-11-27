@@ -8,6 +8,7 @@ import { MarkableComponent } from "./presentational";
 
 type Props = PropsWithChildren<{
   marks: Mark[];
+  className?: string;
   onClick: (event: ClickPositionEvent) => void;
 }>;
 

@@ -5,11 +5,14 @@
     "declaration": true,
     "declarationDir": "./lib/typescript",
     "outDir": "./lib",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
   },
   "exclude": [
     "lib",
     "node_modules",
-    "**/spec.js", 
-    "**/spec.ts",
+    "**/*.spec.js", 
+    "**/*.spec.ts",
   ],
 }

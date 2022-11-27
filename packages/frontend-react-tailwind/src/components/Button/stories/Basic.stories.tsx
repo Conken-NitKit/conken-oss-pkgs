@@ -21,15 +21,12 @@ export const BasicMarkableContainer = (): JSX.Element => {
   }, []);
 
   return (
-    <MarkableContainer.BASIC marks={marks} onClick={handleClick}>
-      <div
-        className="relative w-64 h-64 bg-gray-200"
-        style={{
-          width: "300px",
-          height: "300px",
-          background: "gray",
-        }}
-      />
+    <MarkableContainer.BASIC
+      marks={marks}
+      className="relative w-96 h-96"
+      onClick={handleClick}
+    >
+      <div className="relative inset-0 bg-gray-200" />
     </MarkableContainer.BASIC>
   );
 };
